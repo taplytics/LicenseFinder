@@ -1,5 +1,7 @@
 require 'erb'
 
+include ERB::Util
+
 module LicenseFinder
   class ErbReport < Report
     TEMPLATE_PATH = ROOT_PATH.join('reports', 'templates')

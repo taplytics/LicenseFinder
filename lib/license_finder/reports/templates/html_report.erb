@@ -83,8 +83,8 @@
           <%= link_to_dependency(dependency) %>
           <small><%= version_groups(dependency) %></small>
         </h2>
-        <h4><%= dependency.summary %></h4>
-        <p><%= dependency.description %></p>
+        <h4><%= html_escape(dependency.summary) %></h4>
+        <p><%= html_escape(dependency.description) %></p>
         <% if dependency.parents.any? -%>
           <dl>
             <dt><%=dependency.name%> is required by:</dt>
